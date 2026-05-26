@@ -1,0 +1,17 @@
+{
+  "game.title": "Saboteadores Mentales: Habitantes Invisibles",
+  "game.subtitle": "El tribunal vive dentro de ti.",
+  "actions.confirm": "Confirmar",
+  "actions.cancel": "Cancelar",
+  "actions.back": "Volver",
+  "actions.continue": "Continuar",
+  "actions.save": "Guardar",
+  "actions.delete": "Eliminar",
+  "battle.damage": "{{amount}} de dano",
+  "battle.cardsDrawn_one": "Robaste {{count}} carta",
+  "battle.cardsDrawn_other": "Robaste {{count}} cartas",
+  "language.es-CL": "Espanol Chile",
+  "language.es": "Espanol",
+  "language.en": "English",
+  "language.pt-BR": "Portugues Brasil"
+}

@@ -1,0 +1,65 @@
+import type { Keyword } from "./keywords";
+import type { Rarity } from "./cards";
+
+export const balanceConfig = {
+  weights: {
+    damage: 1,
+    healing: 0.8,
+    cardDraw: 2,
+    block: 2.5,
+    rivalClarityReduction: 2,
+    cleanMentalNoise: 2,
+    clarityGain: 1.2,
+    stressPenalty: -1.5,
+    selfDamagePenalty: -1,
+    mentalNoisePenalty: -0.8,
+    randomEffect: 0.4,
+    comboDependency: -0.6,
+  },
+  rarityModifier: {
+    comun: 0,
+    rara: 0.8,
+    epica: 1.8,
+    legendaria: 3,
+    maldita: 4,
+  } satisfies Record<Rarity, number>,
+  keywordModifier: {
+    Sentencia: 1.6,
+    Cadena: 1.8,
+    Culpa: 1.2,
+    Derrumbe: 1.4,
+    Estampida: 1.7,
+    Mascara: 1.1,
+    Despertar: 1.5,
+    Obsesion: 1.2,
+    Ironia: 0.8,
+    Catarsis: 2,
+    Aceptacion: 0.9,
+    Limites: 1.1,
+    Enfoque: 1,
+    Confianza: 1,
+    Intuicion: 1,
+    Responsabilidad: 1,
+    "Accion Directa": 1,
+    Expresion: 0.9,
+    Silencio: 1.2,
+    Caos: 1.3,
+  } satisfies Record<Keyword, number>,
+  efficiency: {
+    tooStrong: 4.6,
+    tooWeak: 1.2,
+    idealLowCost: 2.2,
+    idealHighCost: 3.4,
+  },
+};
+
+export const balanceWarnings = {
+  selfLawsuit: "Este mazo golpea fuerte, pero tambien se demanda a si mismo.",
+  tooStressful: "Demasiado Estres. Tu sistema nervioso pidio abogado.",
+  highCurve: "Curva alta. La epica no paga la renta.",
+  lowDefense: "Poca defensa. Muy heroico. Muy breve.",
+  stable: "Mazo estable. Sospechosamente adulto.",
+  tooEfficient: "Carta demasiado eficiente. El Tribunal sospecha dopaje emocional.",
+  tooWeak: "Carta demasiado debil. Hasta el Evitador hizo mas ruido.",
+  abusiveCombo: "Combo abusivo. La ansiedad encontro un atajo con abogado.",
+};

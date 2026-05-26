@@ -1,0 +1,17 @@
+{
+  "game.title": "Mental Saboteurs: Invisible Inhabitants",
+  "game.subtitle": "The tribunal lives inside you.",
+  "actions.confirm": "Confirm",
+  "actions.cancel": "Cancel",
+  "actions.back": "Back",
+  "actions.continue": "Continue",
+  "actions.save": "Save",
+  "actions.delete": "Delete",
+  "battle.damage": "{{amount}} damage",
+  "battle.cardsDrawn_one": "You drew {{count}} card",
+  "battle.cardsDrawn_other": "You drew {{count}} cards",
+  "language.es-CL": "Spanish Chile",
+  "language.es": "Spanish",
+  "language.en": "English",
+  "language.pt-BR": "Portuguese Brazil"
+}

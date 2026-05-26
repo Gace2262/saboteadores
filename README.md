@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Saboteadores Mentales: Habitantes Invisibles
 
-## Getting Started
+Demo web offline de cartas tacticas sobre patrones mentales automaticos. El jugador atraviesa un Tribunal Mental lleno de saboteadores, humor negro, bosses teatrales, cartas evolucionables, audio reactivo y guardado local.
 
-First, run the development server:
+## Estado
+
+Version: `0.1.0-demo`
+
+La demo incluye tutorial, combate normal, boss inicial, coleccion limitada, apertura de sobres, perfil basico, cinemáticas placeholder y sistemas de QA/guardado.
+
+## Stack
+
+- Next.js App Router
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Zustand
+- Vitest / Testing Library
+- localStorage
+
+## Instalacion
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir `http://127.0.0.1:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Comandos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run typecheck
+npm run lint
+npm run test -- --run
+npm run test:coverage
+npm run build
+npm run start
+npm run analyze
+npm run clean
+```
 
-## Learn More
+## Variables de entorno
 
-To learn more about Next.js, take a look at the following resources:
+Copiar `.env.example` como `.env.local` para desarrollo local si hace falta.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+NEXT_PUBLIC_APP_NAME="Saboteadores Mentales"
+NEXT_PUBLIC_APP_VERSION="0.1.0-demo"
+NEXT_PUBLIC_BUILD_MODE="demo"
+NEXT_PUBLIC_ENABLE_DEBUG=false
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+No se requieren claves reales.
 
-## Deploy on Vercel
+## Estructura
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `src/app`: rutas App Router.
+- `src/components`: UI, batalla, coleccion, campaña, debug y cinematicas.
+- `src/data`: contenido centralizado.
+- `src/logic`: reglas puras, guardado, economia, IA y diagnostico.
+- `src/store`: stores Zustand.
+- `tests`: unitarias, integracion y E2E opcional.
+- `docs`: testing, deploy, release y QA.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Modo demo
+
+La configuracion vive en `src/data/demoConfig.ts`.
+
+Disponible:
+
+- tutorial;
+- 1 combate normal;
+- 1 boss;
+- coleccion limitada;
+- apertura de 1 sobre;
+- perfil basico;
+- cinematica final.
+
+Bloqueado o parcial:
+
+- Juicio Extremo completo;
+- universo expandido completo;
+- multiplayer futuro;
+- temporadas futuras.
+
+## Guardado
+
+El progreso se guarda en `localStorage`, se valida antes de cargar y puede exportarse/importarse como JSON desde las herramientas de debug en desarrollo.
+
+## Deploy
+
+El proyecto incluye `vercel.json` y `netlify.toml`.
+
+Ver detalles en `docs/deploy.md`.
+
+## Legal
+
+El juego es ficcion simbolica, no diagnostico ni tratamiento. Ver `/legal`.
