@@ -4,14 +4,14 @@ import { ScrollText } from "lucide-react";
 
 const isImportant = (line: string) => /fase|boss|gano|perdio|bloque|dano|cura|estres/i.test(line);
 
-export function BattleLog({ entries }: { entries: string[] }) {
+export function BattleLog({ entries, compact }: { entries: string[]; compact?: boolean }) {
   return (
-    <section className="rounded-xl border border-amber-100/20 bg-[linear-gradient(180deg,rgba(30,22,14,0.78),rgba(5,3,8,0.72))] p-4 shadow-[inset_0_0_30px_rgba(242,211,123,0.05)]">
+    <section className={`min-w-0 rounded-xl border border-amber-100/20 bg-[linear-gradient(180deg,rgba(30,22,14,0.78),rgba(5,3,8,0.72))] shadow-[inset_0_0_30px_rgba(242,211,123,0.05)] ${compact ? "p-3" : "p-4"}`}>
       <div className="mb-3 flex items-center gap-2 text-sm font-black uppercase tracking-[0.16em] text-amber-100/78">
         <ScrollText size={16} />
         Expediente de audiencia
       </div>
-      <div className="max-h-80 space-y-2 overflow-y-auto pr-1">
+      <div className={`${compact ? "max-h-52" : "max-h-80"} space-y-2 overflow-y-auto pr-1`}>
         {entries.map((line, index) => (
           <p
             key={`${line}-${index}`}

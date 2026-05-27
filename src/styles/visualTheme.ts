@@ -14,7 +14,7 @@ export const visualTheme = {
   etchedPanel:
     "rounded-xl border border-amber-100/22 bg-[linear-gradient(145deg,rgba(18,14,11,0.92),rgba(5,3,8,0.88))] shadow-[inset_0_0_32px_rgba(242,211,123,0.05),0_24px_70px_rgba(0,0,0,0.45)]",
   button:
-    "inline-flex min-h-12 items-center justify-center rounded-md border border-amber-100/35 bg-amber-200 px-5 py-3 text-sm font-black uppercase text-black shadow-[0_0_28px_rgba(242,211,123,0.22)] transition hover:bg-white hover:shadow-[0_0_36px_rgba(242,211,123,0.34)]",
+    "inline-flex min-h-11 items-center justify-center rounded-md border border-amber-100/35 bg-amber-200 px-3 py-2 text-xs font-black uppercase text-black shadow-[0_0_28px_rgba(242,211,123,0.22)] transition hover:bg-white hover:shadow-[0_0_36px_rgba(242,211,123,0.34)] sm:min-h-12 sm:px-5 sm:py-3 sm:text-sm",
   ghostButton:
-    "inline-flex min-h-12 items-center justify-center rounded-md border border-white/14 bg-white/[0.06] px-5 py-3 text-sm font-black uppercase text-white transition hover:border-amber-100/45 hover:bg-amber-100/10",
+    "inline-flex min-h-11 items-center justify-center rounded-md border border-white/14 bg-white/[0.06] px-3 py-2 text-xs font-black uppercase text-white transition hover:border-amber-100/45 hover:bg-amber-100/10 sm:min-h-12 sm:px-5 sm:py-3 sm:text-sm",
 };

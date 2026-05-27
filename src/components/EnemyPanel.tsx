@@ -10,6 +10,7 @@ type Props = {
   phase: 1 | 2 | 3;
   phrase: string;
   reducedMotion?: boolean;
+  compact?: boolean;
 };
 
 const phaseTone = {
@@ -18,14 +19,14 @@ const phaseTone = {
   3: "border-red-200/45 bg-[linear-gradient(145deg,rgba(127,29,29,0.48),rgba(5,3,8,0.82))]",
 };
 
-export function EnemyPanel({ enemy, phase, phrase, reducedMotion }: Props) {
+export function EnemyPanel({ enemy, phase, phrase, reducedMotion, compact }: Props) {
   return (
-    <aside className={`relative overflow-hidden rounded-xl border p-4 text-white shadow-[0_24px_70px_rgba(0,0,0,0.46)] ${phaseTone[phase]}`}>
+    <aside className={`relative min-w-0 overflow-hidden rounded-xl border text-white shadow-[0_24px_70px_rgba(0,0,0,0.46)] ${compact ? "p-3" : "p-4"} ${phaseTone[phase]}`}>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(242,211,123,0.14),transparent_26%)]" />
       <div className="relative">
         <p className="text-xs font-black uppercase tracking-[0.25em] text-white/48">Boss demo / fase {phase}</p>
-        <h2 className="mt-1 text-3xl font-black">{perfeccionistaAscendido.name}</h2>
-        <div className="mt-4">
+        <h2 className={`${compact ? "text-2xl" : "text-3xl"} mt-1 font-black leading-tight`}>{perfeccionistaAscendido.name}</h2>
+        <div className={compact ? "mt-3" : "mt-4"}>
           <BossPortrait phase={phase} reducedMotion={reducedMotion} />
         </div>
         <p className="mt-3 rounded-lg border border-amber-100/18 bg-black/45 p-3 text-sm font-bold leading-5 text-amber-100">

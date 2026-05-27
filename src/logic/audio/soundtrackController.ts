@@ -65,6 +65,11 @@ class SoundtrackController {
     this.updateMasterVolume();
   }
 
+  pause() {
+    this.stop();
+    useAudioStore.getState().setStarted(false);
+  }
+
   updateMasterVolume() {
     if (!this.master) return;
     const state = useAudioStore.getState();
